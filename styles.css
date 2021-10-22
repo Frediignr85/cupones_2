@@ -1,0 +1,445 @@
+/*Import the fonts used*/
+
+@import url('https://fonts.googleapis.com/css?family=Courgette|Open+Sans:400,800&display=swap');
+
+/*Basic reset*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*Custom properties*/
+
+:root {
+    --dark-color: #2d2c2c;
+    --purple-solid: #350a4f;
+    --purple-transparent: rgba(53, 10, 79, .7);
+    --purple-transparent-alt: rgba(53, 10, 79, .5);
+    --purple-light: #8f50fb;
+    --yellow-solid: #fa9e2c;
+    --gradient-color: linear-gradient(to right, var(--yellow-solid), var(--purple-light));
+    --gradient-color-alt: linear-gradient(to right, var(--purple-light), var(--yellow-solid));
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    color: var(--dark-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: nome;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+
+/*stiles reusbales*/
+
+.container {
+    width: 100%;
+    max-width: 125rem;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+
+
+/*stilos reusables */
+
+.btn {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: .5rem 3.5rem;
+    border: none;
+    border-radius: 10rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.form-btn {
+    margin-top: 2.5rem;
+    cursor: pointer;
+    margin-left: 48%;
+}
+
+
+/*Header styles*/
+
+.header {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--purple-transparent);
+    z-index: 999;
+}
+
+
+/*Header nav stilos*/
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    margin-left: -20rem;
+    width: 40%;
+}
+
+.hamburger-menu {
+    font-size: 2.6rem;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    z-index: 1500;
+}
+
+.hamburger-menu .fa-times {
+    display: none;
+}
+
+.menu-open .hamburger-menu .fa-times {
+    display: block;
+}
+
+.menu-open .hamburger-menu .fa-bars {
+    display: none;
+}
+
+.nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--purple-solid);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1400;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .5s;
+}
+
+.menu-open .nav-list {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.nav-item:not(:last-child) {
+    margin-bottom: .5rem;
+}
+
+.nav-link {
+    display: block;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 1rem;
+}
+
+
+/*hero sextion styules*/
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: url("./images/estudiantes.jpg") center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    background-color: var(--purple-transparent-alt);
+    z-index: -1;
+}
+
+.main-heading {
+    color: white;
+    line-height: 1;
+    text-shadow: 1px 1px 1rem rgba(0, 0, 0, .5);
+    margin-bottom: 2.5rem;
+}
+
+.title {
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.subtitule {
+    font-size: 3.6rem;
+    font-weight: 300;
+    font-family: 'Courgette', cursive;
+}
+
+.btn {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: .5rem 3.5rem;
+    border: none;
+    border-radius: 10rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-gradient {
+    background-image: var(--gradient-color);
+}
+
+.btn-gradient:hover {
+    background-image: var(--gradient-color-alt);
+}
+
+.btn-purple {
+    background-color: var(--purple-solid);
+}
+
+.btn-purple:hover {
+    background-color: var(--purple-light);
+}
+
+.dots {
+    font-size: 2.4rem;
+    margin-left: .5rem;
+    opacity: .75;
+}
+
+
+/*booking*/
+
+.booking {
+    background-image: var(--gradient-color);
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.input-label {
+    display: block;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+
+.input,
+.options {
+    outline: none;
+    border: none;
+    width: 100%;
+    min-height: 4rem;
+    padding: 1rem;
+    font-weight: bold;
+    color: #a5a5a5;
+    letter-spacing: 2px;
+    font-family: "Open Sans", sans-serif;
+    display: inline-flex;
+    align-items: center;
+    /*resize: none;*/
+}
+
+
+/* Habitaciones */
+
+.section-head {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.heading {
+    display: block;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.sub-heading {
+    font-size: 1.7rem;
+    font-family: "Courgette", cursive;
+    font-weight: 300;
+    color: #a5a5a5;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid: 2.5rem;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.featured-hotels {
+    height: 35rem;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    position: relative;
+    z-index: 0;
+}
+
+.featured-hotels::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--purple-transparent-alt);
+    z-index: -1;
+}
+
+.hotel-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    margin-bottom: 5rem;
+}
+
+.hotel-name {
+    font-size: 2.6rem;
+}
+
+.hotel-price {
+    font-size: 1.8rem;
+}
+
+.hotel-rating {
+    font-size: 10rem;
+    margin: 1rem 0 2.5rem;
+    z-index: 999;
+}
+
+.rating {
+    color: var(--yellow-solid);
+    z-index: 1;
+}
+
+.paragraph {
+    color: var(--purple-transparent-alt);
+    margin-bottom: 2.5rem;
+    justify-content: center;
+    margin-left: 1.0rem;
+    font-weight: bold;
+}
+
+.rooms {
+    background-color: #f2f6f9;
+}
+
+.image-wrap {
+    position: relative;
+    height: 26rem;
+}
+
+.image-wrap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--purple-transparent-alt);
+}
+
+.room-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.room-name {
+    font-weight: 2.6rem;
+    background-color: var(--yellow-solid);
+    color: white;
+    padding: .5rem 2rem;
+    position: absolute;
+    left: 0;
+    bottom: 2.5rem;
+    z-index: 10;
+}
+
+.rooms-grid {
+    margin-bottom: 2rem;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #9d43f1;
+    color: white;
+    text-align: center;
+}
+
+.container-evaluacion {
+    margin-top: 6rem;
+    background: white;
+    height: 100vh;
+}
+
+.container-pregunta {
+    margin-top: 30px;
+    /*IMPORTANTE*/
+    margin-left: 100px;
+}
+
+.container-contenido {
+    border: 2px solid blue;
+    /* IMPORTANTE */
+    width: 1000px;
+}

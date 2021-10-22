@@ -1,0 +1,227 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Lobster:400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Seaweed+Script);
+body{padding:0;margin:0;
+  font-family: 'Open Sans';
+}
+.demo{background:#e0e0e0;
+  padding-top:10px;
+
+}
+@keyframes blink {
+  0% { box-shadow: 0 0 30px #CC0000; }
+  50% { box-shadow: 0 0 20px green; }
+  100% { box-shadow: 0 0 30px #CC0000; }
+}
+
+@-webkit-keyframes blink {
+  0% { box-shadow: 0 0 30px #CC0000; }
+  50% { box-shadow: 0 0 20px green; }
+  100% { box-shadow: 0 0 30px #CC0000; }
+}
+@keyframes blinktext{
+  0%{opacity: 0;}
+  50%{opacity: .5;}
+  100%{opacity: 1;}
+}
+@-webkit-keyframes blinktext{
+  0%{opacity: 0;}
+  50%{opacity: .5;}
+  100%{opacity: 1;}
+}
+
+@-webkit-keyframes glowing {
+  0% {-webkit-box-shadow: 0 0 3px #B20000; }
+  50% {-webkit-box-shadow: 0 0 40px #FF0000; }
+  100% {-webkit-box-shadow: 0 0 3px #B20000; }
+}
+
+@-moz-keyframes glowing {
+  0% { -moz-box-shadow: 0 0 3px #B20000; }
+  50% { -moz-box-shadow: 0 0 40px #FF0000; }
+  100% {-moz-box-shadow: 0 0 3px #B20000; }
+}
+
+@keyframes glowing {
+  0% {  box-shadow: 0 0 3px #B20000; }
+  50% { box-shadow: 0 0 40px #FF0000; }
+  100% { box-shadow: 0 0 3px #B20000; }
+}
+
+
+h4{color:#444}
+.contain{margin-left:5px;
+   margin-right: 5px;
+   padding:5px 5px;
+ }
+ .pricingdiv{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+  justify-content: center;  
+}
+.pricingTable,h4{text-align:center}
+.pricingTable{background:#fff;border-radius:10px;overflow:hidden;position:relative;transition:all .3s ease 0s}
+ .pricingTable{
+  -webkit-animation: blink 2.0s linear infinite;
+  -moz-animation: blink 2.0s linear infinite;
+  -ms-animation: blink 2.0s linear infinite;
+  -o-animation: blink 2.0s linear infinite;
+  animation: blink 2.0s linear infinite;
+}
+.pricingTable svg{display:block;margin-left:-1px}
+.pricingTable .pricing-content{padding:10px 0 10px;position:relative}
+.pricingTable .title{font-family: 'Seaweed Script';font-size:25px;font-weight:600;text-transform:uppercase;margin:0 0 10px}
+.pricingTable .pricing-content ul{padding:0;margin:0 0 10px;list-style:none}
+.pricingTable .pricing-content ul li{font-size:18px;color:rgba(0,0,0,.3);line-height:34px;text-transform:capitalize;color:#212121;}
+.pricingTable .pricingTable-signup{display:inline-block;padding:8px 50px;border-radius:20px;font-size:20px;font-weight:600;color:#fff;text-transform:uppercase;position:relative;transition:all .3s ease 0s}
+.pricingTable{margin-bottom:20px}
+
+.div-fix {
+  height:250px;
+  max-height:350px;
+  overflow-y: auto;
+}
+.pricingTable-signup{
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+
+}
+header {
+  height: 50px;
+  padding: 0 10px;
+  vertical-align: middle;
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333), color-stop(95%, #262626), to(#0d0d0d));
+  background-image: -webkit-linear-gradient(#333, #262626 95%, #0d0d0d);
+  background-image: -moz-linear-gradient(top, #333, #262626 95%, #0d0d0d);
+  background-image: -o-linear-gradient(#333, #262626 95%, #0d0d0d);
+  background-image: linear-gradient(#333, #262626 95%, #0d0d0d);
+  background-repeat: no-repeat;
+  z-index: 1010;
+  margin-bottom: 0px
+}
+footer {
+  height: 50px;
+  line-height: 40px;
+    margin-top: 5px;
+    font-size:25px;
+    font-weight:600;
+  padding-top: 5px;
+  padding-left: 40px;
+  text-align:center;
+  background: #2698e2;
+
+
+}
+
+.foottext1 {
+
+  color: #fff;
+  -webkit-animation: blinktext 5.0s linear infinite;
+  -moz-animation: blinktext 5.0s linear infinite;
+}
+.foottext2 {
+
+  color: #ffb400;
+  -webkit-animation: blinktext 5.0s linear infinite;
+  -moz-animation: blinktext 5.0s linear infinite;
+}
+.card-ordenes{
+    padding-bottom:10px;
+}
+.foot{
+font-size:15px;font-weight:600;
+}
+
+.text1 {
+ height: 50px;
+ overflow: hidden;
+ position: relative;
+}
+.text1 {
+display:block;
+width:auto;
+height:80px;
+position:absolute;
+font-family:'Open Sans';
+font-size:35px;
+line-height:80px;
+float:left;
+width:auto;
+color:#000;
+font-weight:bold;
+padding: 10px 20% 20px;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-timing-function: linear;
+-webkit-animation-duration:17s;
+-webkit-animation-name: scroll;
+}
+
+.text1 a {color:#c00;}
+
+@-webkit-keyframes scroll {
+0% {left:90%;}
+100% {left:-100%;}
+}
+/* Move it (define the animation) */
+@-moz-keyframes text1 {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes text1 {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes text1 {
+ 0%   {
+ -moz-transform: translateX(100%); /* Firefox bug fix */
+ -webkit-transform: translateX(100%); /* Firefox bug fix */
+ transform: translateX(100%);
+ }
+ 100% {
+ -moz-transform: translateX(-100%); /* Firefox bug fix */
+ -webkit-transform: translateX(-100%); /* Firefox bug fix */
+ transform: translateX(-100%);
+ }
+}
+.example5 {
+ height: 50px;
+ overflow: hidden;
+ position: relative;
+}
+.example5 h5 {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: left;
+ /* Apply animation to this element */
+ -moz-animation: example5 5s linear infinite alternate;
+ -webkit-animation: example5 5s linear infinite alternate;
+ animation: example5 5s linear infinite alternate;
+}
+/* Move it (define the animation) */
+@-moz-keyframes example5 {
+ 0%   { -moz-transform: translateX(70%); }
+ 100% { -moz-transform: translateX(0%); }
+}
+@-webkit-keyframes example5 {
+ 0%   { -webkit-transform: translateX(70%); }
+ 100% { -webkit-transform: translateX(0%); }
+}
+@keyframes example5 {
+ 0%   {
+ -moz-transform: translateX(70%); /* Firefox bug fix */
+ -webkit-transform: translateX(70%); /* Firefox bug fix */
+ transform: translateX(70%);
+ }
+ 100% {
+ -moz-transform: translateX(0%); /* Firefox bug fix */
+ -webkit-transform: translateX(0%); /* Firefox bug fix */
+ transform: translateX(0%);
+ }
+}
